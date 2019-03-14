@@ -154,8 +154,8 @@ class WebTestCase(unittest.TestCase):
 
         response = self.get_response(web_path)
 
-        #self.assertEqual(response.getcode(), 404, error_comment)
-        self.assertEqual(response.getcode(), 404)
+        self.assertEqual(response.getcode(), 404, error_comment)
+        #self.assertEqual(response.getcode(), 404)
 
     def test_images_index(self):
         """
