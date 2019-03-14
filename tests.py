@@ -154,7 +154,8 @@ class WebTestCase(unittest.TestCase):
 
         response = self.get_response(web_path)
 
-        self.assertEqual(response.getcode(), 404, error_comment)
+        #self.assertEqual(response.getcode(), 404, error_comment)
+        self.assertEqual(response.getcode(), 404)
 
     def test_images_index(self):
         """
@@ -190,7 +191,7 @@ class WebTestCase(unittest.TestCase):
 
     def test_ok_response_at_root_index(self):
         """
-        A call to / at least yields a 200 OK response 
+        A call to / at least yields a 200 OK response
         """
 
         directory = ''
